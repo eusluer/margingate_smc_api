@@ -76,15 +76,19 @@ class TradingBotController:
             return False
             
         try:
-            # Dosya adını oluştur
+            # Dosya adını oluştur (timestamp olmadan)
             if not filename:
-                base_name = os.path.basename(file_path).replace('.json', '')
-                timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-                filename = f"{base_name}_{timestamp}.json"
+                filename = os.path.basename(file_path)
             
             # Dosyayı oku
             with open(file_path, 'r', encoding='utf-8') as f:
                 file_content = f.read()
+            
+            # Önce mevcut dosyayı silmeye çalış (varsa)
+            try:
+                self.supabase.storage.from_(self.supabase_bucket).remove([filename])
+            except:
+                pass  # Dosya yoksa hata vermez
             
             # Supabase Storage'a yükle
             result = self.supabase.storage.from_(self.supabase_bucket).upload(
@@ -93,7 +97,8 @@ class TradingBotController:
                 file_options={"content-type": "application/json"}
             )
             
-            if result.error:
+            # Response yapısı kontrol et
+            if hasattr(result, 'error') and result.error:
                 print(f"⚠️  {file_path} Supabase'e yüklenirken hata: {result.error}")
                 return False
             else:
@@ -120,14 +125,11 @@ class TradingBotController:
         ]
         
         uploaded_count = 0
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         
         for file_path in files_to_upload:
             if os.path.exists(file_path):
-                base_name = os.path.basename(file_path).replace('.json', '')
-                filename = f"cycle_{self.cycle_count}_{base_name}_{timestamp}.json"
-                
-                if self.upload_to_supabase(file_path, filename):
+                # Aynı isimle kaydet (timestamp yok)
+                if self.upload_to_supabase(file_path):
                     uploaded_count += 1
         
         print(f"📤 {uploaded_count}/{len(files_to_upload)} dosya Supabase'e yüklendi")
