@@ -1,0 +1,95 @@
+{
+  "short_signals": [
+    {
+      "symbol": "MYXUSDT",
+      "interval": "4h",
+      "range_high": 0.1103,
+      "weak_high": 2.35555,
+      "distance_pct": 2035.58,
+      "timestamp": "2025-08-10 12:22:00",
+      "current_price": 1.7434
+    },
+    {
+      "symbol": "GMXUSDT",
+      "interval": "4h",
+      "range_high": 14.771,
+      "weak_high": 30.938,
+      "distance_pct": 109.45,
+      "timestamp": "2025-08-10 12:22:12",
+      "current_price": 18.632
+    },
+    {
+      "symbol": "1000BONKUSDT",
+      "interval": "4h",
+      "range_high": 0.0265,
+      "weak_high": 0.040823,
+      "distance_pct": 54.05,
+      "timestamp": "2025-08-10 12:22:14",
+      "current_price": 0.0268
+    },
+    {
+      "symbol": "MAGICUSDT",
+      "interval": "4h",
+      "range_high": 0.2049,
+      "weak_high": 0.3158,
+      "distance_pct": 54.12,
+      "timestamp": "2025-08-10 12:22:27",
+      "current_price": 0.277
+    },
+    {
+      "symbol": "HFTUSDT",
+      "interval": "4h",
+      "range_high": 0.0566,
+      "weak_high": 0.1674,
+      "distance_pct": 195.76,
+      "timestamp": "2025-08-10 12:22:31",
+      "current_price": 0.1057
+    },
+    {
+      "symbol": "OGUSDT",
+      "interval": "4h",
+      "range_high": 7.448,
+      "weak_high": 15.468,
+      "distance_pct": 107.68,
+      "timestamp": "2025-08-10 12:22:50",
+      "current_price": 15.208
+    },
+    {
+      "symbol": "ALPINEUSDT",
+      "interval": "4h",
+      "range_high": 0.9431,
+      "weak_high": 1.6863,
+      "distance_pct": 78.8,
+      "timestamp": "2025-08-10 12:22:56",
+      "current_price": 1.4794
+    },
+    {
+      "symbol": "MEMEFIUSDT",
+      "interval": "4h",
+      "range_high": 0.0014,
+      "weak_high": 0.00656,
+      "distance_pct": 368.57,
+      "timestamp": "2025-08-10 12:23:04",
+      "current_price": 0.0033
+    },
+    {
+      "symbol": "HEIUSDT",
+      "interval": "4h",
+      "range_high": 0.4117,
+      "weak_high": 0.6483,
+      "distance_pct": 57.47,
+      "timestamp": "2025-08-10 12:23:10",
+      "current_price": 0.5394
+    },
+    {
+      "symbol": "SPKUSDT",
+      "interval": "4h",
+      "range_high": 0.0405,
+      "weak_high": 0.1884,
+      "distance_pct": 365.19,
+      "timestamp": "2025-08-10 12:23:21",
+      "current_price": 0.1132
+    }
+  ],
+  "created_at": "2025-08-10 12:23:23"
+}
